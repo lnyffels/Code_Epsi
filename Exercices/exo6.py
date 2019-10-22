@@ -5,7 +5,7 @@ def inverse(x):
         inv = 1 / x
     return inv
 
-x = input("Rentrer la valeur de x : ")
+x = input("Rentrer SVP la valeur de x : ")
 try:
     inv = inverse(int(x))
     print(inv)
