@@ -13,8 +13,7 @@ class Voiture(Vehicule):
     def avancer(self):
         self.reservoir -=1
 
-
-
 car = Voiture()
 car.avancer()
+# v= Vehicule()
 print(car.reservoir)

@@ -1,5 +1,3 @@
-import json
-
 class OpenFoodFactsAPI:
     """
     Cette classe a pour objectif de récupérer les produits associée à une marque
