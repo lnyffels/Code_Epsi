@@ -1,7 +1,7 @@
 # initialisation
 dicoVide = {}
 dicoVide2 = dict()
-dicoInit = {"nom": "Bob", "age": 42, "identifiant": "S611456"}
+dicoInit = {"nom": "Bob", "age": 46, "identifiant": "S611456"}
 
 # Ajout clé/valeur
 dicoVide["MaCle"] = "valeur1"
