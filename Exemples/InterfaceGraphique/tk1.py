@@ -10,7 +10,7 @@ def change_text():
 
 
 boutonQuit = tk.Button(racine,text ="Quitter ", fg="red", command=racine.destroy)
-boutonModifyText = tk.Button(racine,text ="Modifier texte", fg="Blue", command=change_text)
+boutonModifyText = tk.Button(racine,text ="Modifier texte ", fg="Blue", command=change_text)
 
 label.pack()
 zone.pack()
