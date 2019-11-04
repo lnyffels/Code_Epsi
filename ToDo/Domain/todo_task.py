@@ -1,4 +1,4 @@
-from ToDo.todo_status import ToDoStatus
+from ToDo.Domain.todo_status import ToDoStatus
 
 class ToDoTask:
     def __init__(self, description):

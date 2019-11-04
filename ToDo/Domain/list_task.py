@@ -1,5 +1,5 @@
-from ToDo.todo_task import ToDoTask
-from ToDo.todo_status import ToDoStatus
+from ToDo.Domain.todo_task import ToDoTask
+
 
 class ListTask:
     def __init__(self):

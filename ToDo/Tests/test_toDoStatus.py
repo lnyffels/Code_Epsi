@@ -1,5 +1,5 @@
 from unittest import TestCase
-from ..todo_status import ToDoStatus
+from ToDo.Domain.todo_status import ToDoStatus
 
 class TestToDoStatus(TestCase):
     def test_all_status(self):

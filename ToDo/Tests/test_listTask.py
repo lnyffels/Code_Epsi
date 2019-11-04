@@ -1,5 +1,5 @@
 from unittest import TestCase
-from ..list_task import ListTask
+from ToDo.Domain.list_task import ListTask
 
 class TestListTask(TestCase):
 

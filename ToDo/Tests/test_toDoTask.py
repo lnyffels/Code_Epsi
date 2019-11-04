@@ -1,5 +1,5 @@
 from unittest import TestCase
-from ..todo_task import ToDoTask
+from ToDo.Domain.todo_task import ToDoTask
 
 
 class TestToDoTask(TestCase):
