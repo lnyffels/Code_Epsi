@@ -1,17 +1,18 @@
-from ..Domain.todo_task import ToDoTask
-from ..Domain.list_task import ListTask
-from ..Domain.todo_status import ToDoStatus
+from ..Tools.TodoJsonEncoder import TodoJsonEncoder
 from ToDo.Repository.todo_repository import ToDoRepository
 import json
 
 class TodoJsonRepository(ToDoRepository):
+
     def save(self, todo_task):
         try:
-            with open('c:\\todo_data.json', 'a') as f:  # externaliser
-                json.dump(todo_task, f)
+            with open('todo_data.json', 'a') as f:  # externaliser
+                str_task = json.dumps(todo_task, cls=TodoJsonEncoder)
+                f.write(str_task)
             return True
-        except:
-            raise Exception("erreur enregistrement fichier json")
+        except Exception as exc:
+            print(exc)
+            raise exc
 
     def get_all(self):
         pass
