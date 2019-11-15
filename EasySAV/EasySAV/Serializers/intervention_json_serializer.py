@@ -1,5 +1,6 @@
 import json
 
+
 class InterventionJsonEncoder(json.JSONEncoder):
     def default(self, o):
         try:

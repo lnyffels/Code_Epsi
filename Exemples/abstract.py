@@ -1,5 +1,6 @@
 import abc
 
+
 class Vehicule(abc.ABC):
     @abc.abstractmethod
     def avancer(self):
@@ -11,10 +12,10 @@ class Voiture(Vehicule):
         self.reservoir = 40
 
     def avancer(self):
-        self.reservoir -=1
-
+        self.reservoir -= 1
 
 
 car = Voiture()
 car.avancer()
+# v= Vehicule()
 print(car.reservoir)
