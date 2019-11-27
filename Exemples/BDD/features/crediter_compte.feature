@@ -7,7 +7,7 @@ Feature: Crediter_compte
   AFIN DE l'alimenter
 
   REGLE : credit_simple :
-    solde = somme(montant des opérations)
+    solde = somme(montant des operations)
 
   Scenario Outline: credit_simple
 
