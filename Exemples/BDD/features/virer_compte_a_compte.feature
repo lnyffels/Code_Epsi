@@ -1,10 +1,10 @@
 # Created by Laurent at 15/11/2019
 Feature: virer_compte_simple
-  """
+
   EN TANT QUE client de la banque
   JE PEUX effectuer un virement depuis mon compte courant
   AFIN DE d'alimenter un compte épargne
-  """
+
 
   Scenario: virement_simple
     # Enter steps here
