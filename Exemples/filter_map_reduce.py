@@ -9,6 +9,7 @@ def get_entier_inferieur_cinquante(valeur):
 generateur = filter(get_entier_inferieur_cinquante, listeEntier)
 for val in generateur:
     print(val)
+
 listeFiltree = list(filter(get_entier_inferieur_cinquante, listeEntier))
 for val in listeFiltree:
     print(val)

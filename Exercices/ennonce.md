@@ -4,7 +4,7 @@ Le programme que vous devez créer pour cet exercice commence par la lecture dan
 
 print(f"Pour un repas de {repas:.2f}")
 
-**Exo 2 : Chute libre**
+**Exo 2 : Chute libre** 
 
 Créer un programme qui détermine la vitesse à laquelle un objet se déplace lorsqu'il touche le sol. L'utilisateur entrera la hauteur à partir de laquelle l'objet est lâché en mètres (m). Lorsque l'objet est lâché, sa vitesse initiale est de 0 m/s. Supposons que l'accélération due à la gravité est de 9,8 m / s2. Vous utilisez la formule vf = racine carré (vi2 + 2ad) pour calculer la vitesse final, vf, lorsque la vitesse initiale vi, l'accélération a et la distance d sont connues.
 

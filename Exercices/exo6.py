@@ -1,3 +1,4 @@
+# Correction
 def inverse(x):
     if x == 0:
         raise ZeroDivisionError
