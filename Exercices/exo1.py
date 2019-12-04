@@ -1,4 +1,4 @@
-# Exo 1
+# Correction
 TAX_RATE = 0.1
 TIP_RATE = 0.18
 

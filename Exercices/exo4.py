@@ -1,3 +1,4 @@
+# Correction
 BABY_PRICE = 0.00
 CHILD_PRICE = 14.00
 ADULT_PRICE = 23.00

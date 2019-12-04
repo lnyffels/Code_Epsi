@@ -1,5 +1,5 @@
+# Correction
 words = []
-
 word = input("Entrer un mot : ")
 
 while word != "":
