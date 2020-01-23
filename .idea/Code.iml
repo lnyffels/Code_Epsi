@@ -6,9 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PackageRequirementsSettings">
-    <option name="requirementsPath" value="" />
-  </component>
-  <component name="TestRunnerService">
-    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
+    <option name="requirementsPath" value="C:\GUILDE DE DEV\EPSI\Python\Code\Tarificateur\requirements.txt" />
   </component>
 </module>
