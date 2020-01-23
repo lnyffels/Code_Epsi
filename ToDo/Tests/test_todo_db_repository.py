@@ -24,6 +24,6 @@ class TestTodoDbRepository(unittest.TestCase):
         self.assertTrue(bRet)
 
     def test_save(self):
-        task = ToDoTask("cours python")
+        task = ToDoTask("ecrire scenarios python")
         bRet = self.repo.save(task)
         self.assertTrue(bRet)

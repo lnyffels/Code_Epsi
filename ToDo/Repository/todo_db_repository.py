@@ -20,7 +20,8 @@ class TodoDbRepository(ToDoRepository):
         return True
 
     def __execute_commande(self, sqlCommand):
-        self.cursor.execute(sqlCommand)
+        self.__cursor.execute(sqlCommand)
+
 
     def __commit(self):
         self.__conn.commit()
