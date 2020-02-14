@@ -6,10 +6,16 @@ Feature: virer_compte_simple
   AFIN DE d'alimenter un compte épargne
 
 
-  Scenario: virement_simple
+
+  Scenario Outline: virement_simple
     # Enter steps here
-    Given mon compte courant_123 a un solde de 280.50 euros
-    Given mon compte epargne_CEL a un solde de 1200.00 euros
-    When je vire 100 euros de mon compte courant_123 vers mon compte epargne_CEL
-    Then alors mon compte courant_123 a un solde de 180.50
-    And  mon compte epargne_CEL a un solde de 1300.00 euros
+    Given mon compte courant_123 a un solde de <init_montant_courant> euros
+    Given mon compte epargne_CEL a un solde de <init_montant_epargne> euros
+    When je vire <montant> euros de mon compte courant_123 vers mon compte epargne_CEL
+    Then alors mon compte courant_123 a un solde de <solde_courant> euros
+    And mon compte epargne_CEL a un solde de <solde_epargne> euros
+
+    Examples: 2_transfers
+    | init_montant_courant  | init_montant_epargne  | montant     | solde_courant | solde_epargne |
+    | 300.00                | 1200.00               | 100.00      | 200.00        | 1300.00       |
+

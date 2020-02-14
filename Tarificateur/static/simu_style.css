@@ -1,0 +1,72 @@
+
+
+form {
+ background-color:#FAFAFA;
+ padding:10px;
+ width:550px;
+ }
+
+fieldset {
+ padding:0 20px 20px 20px;
+ margin-bottom:10px;
+ border:1px solid #2333d8      /* US Changement de couleur cadre et légende: Mettre en rouge  #D82912  */
+ }
+
+H1 {
+ color: #808080;
+ font-weight:bold;
+ font-size: x-large;
+ margin-bottom: 0px;
+ width: auto;
+ border-bottom: 0px
+ }
+
+legend {
+ color: #2333d8;   /* US Changement de couleur cadre et légende: Mettre en rouge  #D82912  */
+ font-weight:bold;
+ font-size: large;
+ margin-bottom: 0px;
+ width: auto;
+ border-bottom: 0px
+ }
+label {
+ margin-top:10px;
+ display:block;
+ }
+label.inline {
+ display:inline;
+ margin-right:50px;
+ }
+input, textarea, select, option {
+ background-color: #dfe2f5;
+ }
+input {
+ padding:3px;
+ border:1px solid #dfe2f5;
+ border-radius:5px;
+ width:80px;
+ box-shadow:1px 1px 2px #959595 inset;
+ }
+
+textarea, select {
+ padding:3px;
+ border:1px solid #dfe2f5;
+ border-radius:5px;
+ width:290px;
+ box-shadow:1px 1px 2px #C0C0C0 inset;
+ }
+select {
+ margin-top:10px;
+ }
+input[type=radio] {
+ background-color:transparent;
+ border:none;
+ width:10px;
+ }
+input[type=submit], input[type=reset] {
+ width:100px;
+ margin-left:5px;
+ box-shadow:1px 1px 1px #2333d8;
+ cursor:pointer;
+ }
+

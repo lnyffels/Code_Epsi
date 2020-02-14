@@ -17,8 +17,6 @@ class MyTestCase(unittest.TestCase):
     def setUpClass(cls) -> None:
         print("setup")
 
-
-
     def test_magicMock_returvalue(self):
         lnf = Personne()
         mock_2 = mock.MagicMock(return_value="moooook")

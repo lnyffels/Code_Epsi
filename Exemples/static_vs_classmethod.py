@@ -5,7 +5,8 @@ class Personne:
     friends = []
 
     def __init__(self, nom):
-        self.nom = nom
+       self.nom = nom
+
 
     @classmethod
     def ajouter_ami(cls, ami):
@@ -19,3 +20,4 @@ class Personne:
 pers = Personne("lnf")
 Personne.ajouter_ami("bob")
 guid1 = Personne.generer_uuid()
+print(guid1)

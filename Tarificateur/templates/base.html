@@ -1,0 +1,24 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}Démo COMEX{% endblock %}
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+           <a class="navbar-brand" href="/">DEMO COMEX</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+            <li class="nav-item"> <a href="/">Hopital</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ url_for('resultat_optique') }}">Optique</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="{{ url_for('resultat_dentaire') }}">Dentaire</a> </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="container">
+{% block page_content %}{% endblock %}
+</div>
+{% endblock %}

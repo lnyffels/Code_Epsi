@@ -12,14 +12,13 @@ class Invite(Personne):
         self.entreprise = entreprise
 
     def _is_adulte(self):
-        return self._age >= 5
+        return self._age >= 21
 
     def __str__(self):
         if self._is_adulte():
             return f"GUEST : {self._nom}, âge: {self._age}, Entreprise : {self.entreprise}"
         else:
             return "invité mineur"
-
 
 guest = Invite("Dupont", 14, "AXA")
 print(guest)

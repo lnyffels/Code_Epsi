@@ -1,6 +1,5 @@
 import abc
 
-
 class Vehicule(abc.ABC):
     @abc.abstractmethod
     def avancer(self):

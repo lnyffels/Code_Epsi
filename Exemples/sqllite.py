@@ -20,7 +20,7 @@ class ManageSqlLite:
         self.execute_commande(sqlSelectCommand)
         for row in self.cursor:
             lstRecords.append('{0} : {1}'.format(row[0], row[1]))
-        return  lstRecords
+        return lstRecords
 
     def commit(self):
         self.conn.commit()

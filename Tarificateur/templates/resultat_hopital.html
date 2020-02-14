@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='simu_style.css')}}">
+{% endblock %}
+
+{% block page_content %}
+
+		<h1><span> Résultat de votre simulation pour la prestation suivante : {{prestation}} </span> </h1>
+		<br>
+		<fieldset>
+			 <br>
+			 <p> Vos dépenses : <b>{{depense}} </b> € </p>
+			 <p> La sécurité sociale vous rembourse :  <b>{{secu}} </b> € </p>
+			<p> <span> Restant à votre charge avant la formule AXA :  <b>{{rac_avant}}</b> € </span> </p>
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend> Avec la formule : {{formule}} </legend>
+			<br>
+		    <p> Le remboursement total (AXA + Sécurité sociale) s'élève à <b> {{axa_secu}} </b> € </p>
+			<p> <span> <b> Votre reste à charge sera de : {{ rac }}  € </b> </span> </p>
+		 </fieldset>
+{% endblock %}

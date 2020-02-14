@@ -1,6 +1,6 @@
 import unittest
 import json
-from ..server import app
+from Exercices.classement_L1 import app
 
 
 class TestServer(unittest.TestCase):
@@ -10,13 +10,15 @@ class TestServer(unittest.TestCase):
         self.app = app.test_client()
         self.assertEqual(app.debug, True)
 
-    def test_home_root(self):
-        response = self.app.get('/', follow_redirects = False)
+    def test_classement(self):
+        response = self.app.get('/api/classement/', follow_redirects = False)
+        s = json.loads(response.data)
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.data, b"Home page")
+        self.assertEqual(s["titre"], "Classement Ligue 1")
+
 
     def test_add_root(self):
-        response = self.app.post('/add', data= json.dumps({'description':'ecrire scenarios python 2', 'status': 'ToDo'}),
+        response = self.app.post('/api/classement/add', data= json.dumps({'Equipe':'OL', 'points': '34'}),
                                  content_type='application/json')
         self.assertEqual(response.status_code, 200)
 

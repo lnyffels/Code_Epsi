@@ -17,5 +17,5 @@ Feature: Crediter_compte
 
     Examples: 2_operations_credit
     | montant_init  | operation_init  | solde_init     |
-    | 50.00         | 150.00          | 200.00         |
+    | 55.00         | 150.00          | 215.00         |
     | -150.00       | 10.00           | -140.00        |

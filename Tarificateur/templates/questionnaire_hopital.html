@@ -1,0 +1,72 @@
+
+{% extends "base.html" %}
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='simu_style.css')}}">
+{% endblock %}
+{% block title %} Calculez et simulez vos remboursements santé {% endblock %}
+{% block page_content %}
+
+			<form action="{{ url_for('resultat_hopital') }}" method="post">
+
+                    <H1> Remboursements d'hospitalisation </H1> <br/>
+
+                <fieldset>
+                 <br>
+                 <p> Vous relevez du régime Alsace-Moselle ?  </p>
+                     <input type="radio" name="alsace" value="oui" id="oui" disabled />
+                       <label for="oui" class="inline">oui</label>
+                     <input type="radio" name="alsace" value="non" id="non" checked="checked" />
+                       <label for="non" class="inline">non</label>
+                <br> <br>
+                <p> Le médecin a adhéré à un Dispositif de Pratique TArifaire Maitrisée ?  </p>
+                     <input type="radio" name="dptam" value="oui" id="ok" checked="checked"  />
+                       <label for="oui" class="inline">oui</label>
+                     <input type="radio" name="dptam" value="non" id="no"  disabled />
+                       <label for="non" class="inline">non</label>
+                </fieldset>
+
+                  <fieldset>
+                     <legend> Simulez vos dépenses </legend>
+
+                      <label>Choisissez un exemple de prestation :</label>
+                       <select name="prestation" id="prestation">
+                       <option value="APPENDICITE_CHIR">Appendicite - Honoraire Chirurgien</option>
+                       <option value="APPENDICITE_ANES">Appendicite - Honoraire Anesthésiste</option>
+                       <option value="ACCOUCHEMENT_OBST">Accouchement - Honoraire Obstétricien</option>
+                       <option value="ACCOUCHEMENT_ANES">Accouchement - Honoraire Anesthésiste</option>
+                       <option value="CHAMBRE_PART">Chambre particulière - 4 jours</option>
+                       <option value="LIT_ACCO">Lit d'accompagnement - 4 jours</option>
+                       </select>
+
+
+                      <label>Saisir vos dépenses (euros) :</label>
+                       <input type="number" name="depense" step=".01" min="0" max="8000" id="depense" required oninput="validity.valid||(value='');">
+                         <br>
+
+                  </fieldset>
+
+                  <fieldset>
+                     <legend> Choisissez votre formule AXA </legend>
+
+                     <select name="formule" id="formule">
+                       <option value="MA_HOSPI_NR">Ma santé Hospi Tradi</option>
+                       <option value="MA_ECO_NR">Ma santé Eco Tradi</option>
+                       <option value="MA_100_NR">Ma santé 100% Tradi</option>
+                       <option value="MA_100_R">Ma santé 100% Néo</option>
+                       <option value="MA_125_R">Ma santé 125% Néo</option>
+                       <option value="MA_150_R">Ma santé 150% Néo</option>
+                       <option value="MA_200_R">Ma santé 200% Néo</option>
+                       <option value="MA_400_NR">Ma santé 400% Tradi</option>
+                     </select>
+
+                  </fieldset>
+
+             <p>
+             <input type="submit" value="Calculer" />
+             <input type="reset" value="Annuler" />
+             </p>
+
+			</form>
+
+{% endblock %}
