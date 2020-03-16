@@ -1,5 +1,16 @@
 import sqlite3
 
+class User:
+    def __init__(self, nom, age):
+        self.nom = nom
+        self.age = age
+
+    def to_dict(self):
+        return {
+            'nom': self.nom,
+            'age': self.age
+        }
+
 class ManageSqlLite:
     def __init__(self, baseName):
         self.conn = sqlite3.connect(baseName)
@@ -22,6 +33,14 @@ class ManageSqlLite:
             lstRecords.append('{0} : {1}'.format(row[0], row[1]))
         return lstRecords
 
+    def return_liste_dico_user(self, sqlSelectCommand):
+        lst = []
+        self.execute_commande(sqlSelectCommand)
+        for row in self.cursor:
+            lst.append(User(row[0], row[1]).to_dict())
+        return lst
+
+
     def commit(self):
         self.conn.commit()
 
@@ -38,7 +57,9 @@ list_person.append({"name": "Clément", "age": 28})
 for pers in list_person:
     bdd.insert_person_in_database(pers)
 bdd.commit()
-lst = bdd.return_liste_record("SELECT * FROM users")
+#lst = bdd.return_liste_record("SELECT * FROM users")
+lst = bdd.return_liste_dico_user("SELECT * FROM users")
+
 print(lst)
 
 #

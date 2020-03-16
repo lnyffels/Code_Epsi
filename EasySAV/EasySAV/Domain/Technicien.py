@@ -11,11 +11,3 @@ class Technicien(object):
     def ajouter_intervention(self, intervention: Intervention):
         self.interventions.append(intervention)
 
-
-interv1 = Intervention(233,"azze", "azerttt", "jjjjjjj")
-interv2 = Intervention(566,"juju", "asdt", "aaaaa")
-tech = Technicien("lnf", "bob")
-tech.ajouter_intervention(interv1)
-tech.ajouter_intervention(interv2)
-for i in tech.interventions:
-    print(i)

@@ -21,13 +21,3 @@ class Intervention:
             "piece" : self.piece,
             "probleme" : self.probleme
         }
-
-    def __eq__(self, other):
-        return self.to_dict() == other.to_dict()
-
-    def __str__(self):
-        return f"== Intervention == \n" \
-               f"Code : {self.code} \n" \
-               f"Référence Client : {self.ref_client} \n" \
-               f"Pièce à diagnostiquer : {self.piece} \n" \
-               f"Panne : {self.probleme} \n" \

@@ -20,6 +20,11 @@ def classement():
     return jsonify(dico_L1)
 
 
+@app.route('/api/classement/allinterventions')
+def interventions():
+    lst = [{'id':5, 'client':'dupont', 'panne':'frigo 345'}, {'id':3, 'client':'gilles', 'panne':'télé'}]
+    return jsonify(lst)
+
 
 if __name__ == '__main__':
     app.run()

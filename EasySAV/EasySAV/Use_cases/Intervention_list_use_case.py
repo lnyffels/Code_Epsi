@@ -3,4 +3,4 @@ class InterventionUseCase:
         self.repo = repo
 
     def execute(self):
-        return self.repo.list()
+        return self.repo.get_all_interventions()

@@ -10,6 +10,12 @@ class TestServer(unittest.TestCase):
         self.app = app.test_client()
         self.assertEqual(app.debug, True)
 
+    def test_interventions(self):
+        response = self.app.get('/api/classement/allinterventions', follow_redirects = False)
+        inters = json.loads(response.data)
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(inters[1]["client"], "gilles")
+
     def test_classement(self):
         response = self.app.get('/api/classement/', follow_redirects = False)
         s = json.loads(response.data)

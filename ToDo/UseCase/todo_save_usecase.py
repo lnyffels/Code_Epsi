@@ -8,4 +8,4 @@ class ToDoSaveUseCase:
 
     def execute(self, request_object):
         self.repository.save(request_object)
-        return ToDoSaveResponseObject(True)
+        return ToDoSaveResponseObject("True")

@@ -16,7 +16,7 @@ class TestServer(unittest.TestCase):
         self.assertEqual(response.data, b"Home page")
 
     def test_add_root(self):
-        response = self.app.post('/add', data= json.dumps({'description':'ecrire scenarios python 2', 'status': 'ToDo'}),
+        response = self.app.post('/add', data= json.dumps({'description':'Commencer tp pour grp B', 'status': 'ToDo'}),
                                  content_type='application/json')
         self.assertEqual(response.status_code, 200)
 
